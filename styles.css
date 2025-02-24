@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: #181818;
+    color: white;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+#right {
+    flex: 1;
+}
+
+/* Sign In */
+#signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    width: 80%;
+}
+
+#signin form {
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+#signin .logo {
+    margin-bottom: 8vh;
+}
+
+#signin .logo img {
+    width: 300px;
+}
+
+#signin label{
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+#signin .text-input {
+    margin-bottom: 1.3rem;
+    width: 100%; /*Horizontal*/
+    border-radius: 2px; 
+    background: #181818; 
+    border: 1px solid #555; /*cadre*/
+    color: #ccc;
+    padding: 0.5rem 1rem;  /*writting place*/
+    line-height: 1.3rem;
+}
+
+#signin .first-button {
+    width: 100%;
+}
+
+#signin .second-button,
+.or,
+.links {
+    width: 60%;
+}
+
+#signin .links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+#signin .links a:hover {
+    color: orangered;
+}
+
+#signin .or {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+
+#signin .or .bar {
+    flex: auto;
+    border: none;
+    height: 1px;
+    background: #aaa;
+}
+
+#signin .or span {
+    color: #ccc;
+    padding: 0.8rem;
+}
+
+#footer {
+    color: #ccc;
+    text-align: center;
+    font-size: 0.8rem;
+    max-width: 80%;
+    padding-top: 5rem;
+}
+
+#footer a {
+    color: orangered;
+    text-decoration: underline;
+}
+
+#show-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('img/Car1.jpeg') no-repeat center center / cover;
+    height: 100vh;
+    text-align: center;
+}
+
+#show {
+    padding-bottom: 45rem;
+}
+
+.right-button {
+    display: block;
+    border: 1px solid #f4f4f4;
+    border-radius: 1px;
+    font-weight: normal;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 1.2rem;
+    width: 60%;
+    margin: auto;
+    height: 2.7rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+.right-button:hover {
+    color: orangered;
+    border-color: orangered;
+}
+
+/* Button */
+.first-button {
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 1px solid orangered;
+    border-radius: 2px;
+    font-weight: 500;
+    background: orangered;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.first-button:hover {
+    background-color: #181818;
+    border-color: orangered;
+    color: orangered
+    
+}
+
+.second-button {
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 1px solid #f4f4f4;
+    border-radius: 2px;
+    font-weight: 500;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.second-button:hover {
+    color: orangered;
+    border-color: orangered;
+}
+
+
+/* Media Queries */ /* ==> its meane browser size*/
+@media (min-width: 1200px){
+    #left {
+        flex: 4;
+    }
+
+    #right {
+        flex: 6;
+    }
+}
+
+/* This for phones and tablet media*/
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+    #right{
+        display:none;
+    }
+    #left {
+        justify-content: start;
+        margin-top: 2vh;
+    }
+    #signin .logo {
+        margin-bottom: 1vh;
+    }
+    #footer {
+        padding-top: 1rem;
+    }
+}
